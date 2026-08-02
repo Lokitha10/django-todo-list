@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color:Blue; text-align: center;">Edit Task</h1>
+    <form method="POST" action="{% url 'update_todo' todo.id %}">
+        {% csrf_token %}
+        Task Title:<input type="text" name="tasktitle" value="{{todo.tasktitle}}"><br><br>
+        Description:<input type="text" name="taskdesc" value="{{todo.taskdesc}}"><br><br>
+        status:<ol>
+            <li>
+                <input type="radio" name="status" value="Pending">Pending
+                <input type="radio" name="status" value="Completed">Completed
+            </li>
+        </ol>
+        <button type="Submit" text-align="left">Update Task</button>
+        <button type="submit" text-align="left">Cancel</button>
+    </form>
+</body>
+</html>
