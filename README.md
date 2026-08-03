@@ -1,24 +1,25 @@
 # 📝 Django Todo List
 
-A simple **To-Do List** web application developed using **Django** and **MySQL**. This project allows users to manage their daily tasks with basic CRUD (Create, Read, Update, Delete) operations.
+A simple and user-friendly **To-Do List Web Application** developed using **Django**, **Python**, **SQLite**, **HTML**, and **CSS**. This application helps users create, manage, update, and delete daily tasks efficiently.
 
 ---
 
-## 📌 Project Overview
+## 📌 Project Description
 
-The Todo List application helps users organize and manage their daily activities. Users can add new tasks, view all tasks, update existing tasks, and delete completed or unwanted tasks.
+The Django Todo List is a CRUD-based web application that allows users to organize their daily activities. Users can add new tasks, edit existing tasks, delete completed tasks, and monitor their task status.
 
 ---
 
-## ✨ Features
+## 🚀 Features
 
 - ➕ Add New Task
 - 📋 View All Tasks
 - ✏️ Edit Existing Task
 - 🗑️ Delete Task
-- ✅ Task Status (Pending / Completed)
-- ❌ Cancel button redirects to Home Page
-- 💾 Data stored in MySQL Database
+- ✅ Update Task Status
+- ❌ Cancel Button (Redirects to Home Page)
+- 🎨 Simple and Clean User Interface
+- 💾 SQLite Database Integration
 
 ---
 
@@ -26,13 +27,13 @@ The Todo List application helps users organize and manage their daily activities
 
 - Python 3
 - Django 5
-- MySQL
+- SQLite3
 - HTML5
 - CSS3
 
 ---
 
-## 📂 Project Structure
+## 📁 Project Structure
 
 ```
 todo_project/
@@ -40,7 +41,8 @@ todo_project/
 ├── todo_project/
 │   ├── settings.py
 │   ├── urls.py
-│   └── ...
+│   ├── wsgi.py
+│   └── asgi.py
 │
 ├── todo_app/
 │   ├── migrations/
@@ -52,9 +54,13 @@ todo_project/
 │   │   └── edit.html
 │   ├── models.py
 │   ├── views.py
+│   ├── urls.py
 │   └── admin.py
 │
+├── db.sqlite3
 ├── manage.py
+├── requirements.txt
+├── build.sh
 └── README.md
 ```
 
@@ -62,87 +68,73 @@ todo_project/
 
 ## 🗄️ Database
 
-Database: **MySQL**
+**Database:** SQLite
 
-Table: **Todo**
-
-### Fields
+### Todo Model
 
 | Field | Type |
-|-------|------|
+|--------|------|
 | id | Auto Increment |
-| tasktitle | CharField |
+| tasktitle | CharField(100) |
 | taskdesc | TextField |
-| status | CharField |
+| status | CharField(20) |
 
 ---
 
 ## ⚙️ Installation
 
-### Clone the repository
+### Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/todo-project.git
+git clone https://github.com/Lokitha10/django-todo-list.git
 ```
 
-### Move to project directory
+### Move into Project
 
 ```bash
-cd todo_project
+cd django-todo-list
 ```
 
-### Install Django
+### Create Virtual Environment (Optional)
 
 ```bash
-pip install django
+python -m venv venv
 ```
 
-### Install MySQL Client
+### Activate Virtual Environment
+
+#### Windows
 
 ```bash
-pip install mysqlclient
+venv\Scripts\activate
 ```
 
----
+#### Linux / Mac
 
-## 🔧 Configure Database
-
-Update **settings.py**
-
-```python
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'tododb',
-        'USER': 'root',
-        'PASSWORD': 'your_password',
-        'HOST': 'localhost',
-        'PORT': '3306',
-    }
-}
+```bash
+source venv/bin/activate
 ```
 
----
+### Install Dependencies
 
-## 📦 Apply Migrations
+```bash
+pip install -r requirements.txt
+```
+
+### Apply Migrations
 
 ```bash
 python manage.py makemigrations
-```
-
-```bash
 python manage.py migrate
 ```
 
----
-
-## ▶️ Run the Project
+### Run the Server
 
 ```bash
 python manage.py runserver
 ```
 
-Open your browser:
+Open:
 
 ```
 http://127.0.0.1:8000/
@@ -152,59 +144,65 @@ http://127.0.0.1:8000/
 
 ## 📷 Application Workflow
 
-1. Open Home Page
+1. Home Page
 2. Click **Add New Task**
 3. Enter Task Details
 4. Save Task
-5. View Task List
+5. View All Tasks
 6. Edit Task
-7. Delete Task
+7. Update Task
+8. Delete Task
 
 ---
 
-## 📚 CRUD Operations
+## CRUD Operations
 
-### Create
-Adds a new task to the database.
+### ➕ Create
 
-### Read
-Displays all tasks.
+Creates a new task and stores it in the database.
 
-### Update
-Modifies task details.
+### 📖 Read
 
-### Delete
-Removes a task from the database.
+Displays all available tasks.
+
+### ✏️ Update
+
+Updates task title, description, and status.
+
+### 🗑️ Delete
+
+Deletes the selected task from the database.
 
 ---
 
 ## 🎯 Learning Outcomes
 
-This project helped in understanding:
+This project helped in learning:
 
 - Django Project Structure
 - Django Models
 - URL Routing
 - Views
 - Templates
-- CRUD Operations
-- MySQL Database Integration
-- Static Files (CSS)
+- Static Files
 - Form Handling
-- Redirects
+- CRUD Operations
+- SQLite Database
+- Git & GitHub
+- Render Deployment
 
 ---
 
-## 🚀 Future Enhancements
+## 🌟 Future Enhancements
 
 - User Authentication
-- Search Tasks
-- Due Date
 - Task Priority
-- Categories
-- Dashboard
+- Due Date
+- Search Tasks
+- Filter by Status
 - Responsive Design
 - Dark Mode
+- User Dashboard
 
 ---
 
@@ -212,14 +210,16 @@ This project helped in understanding:
 
 **T. Lokitha**
 
-B.Tech – Artificial Intelligence & Machine Learning
+- Python Developer
+- Django Developer
+- Artificial Intelligence & Machine Learning Student
 
-Python & Django Developer
+**GitHub**
 
-GitHub: https://github.com/Lokitha10
+https://github.com/Lokitha10
 
 ---
 
 ## 📄 License
 
-This project is developed for learning and educational purposes.
+This project is developed for educational and learning purposes.
