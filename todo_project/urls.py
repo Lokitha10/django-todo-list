@@ -26,4 +26,5 @@ urlpatterns = [
     path('edit_todo/<int:id>/',views.edit_todo,name='edit_todo'),
     path('delete_todo/<int:id>/',views.delete_todo,name='delete_todo'),
     path('update_todo/<int:id>/',views.update_todo,name='update_todo'),
+    path('cancel_todo/<int:id>/',views.cancel_todo,name='cancel_todo'),
 ]

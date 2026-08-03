@@ -46,3 +46,6 @@ def update_todo(request, id):
 
         todo.save()
         return redirect("home")
+
+def cancel_todo(request):
+    return redirect("home")

@@ -1,0 +1,52 @@
+body{
+    background-color: lightblue;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1{
+    color: navy;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: red;
+}
+
+#tabl{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#tabl th{
+    background-color: navy;
+    color: white;
+    padding: 10px;
+}
+
+#tabl td{
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+#form1{
+    width: 400px;
+    margin: 50px auto;
+    background-color: lightgoldenrodyellow;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    
+}
+#edit1{
+    width: 400px;
+    margin: 50px auto;
+    background-color: lightgoldenrodyellow;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    
+}
