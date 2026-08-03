@@ -151,19 +151,22 @@ http://127.0.0.1:8000/
 
 ### Home Page
 
-(Add Screenshot Here)
+<img width="1915" height="874" alt="image" src="https://github.com/user-attachments/assets/74e49b8e-edd8-4cb0-b83b-0fa771971b66" />
+
 
 ---
 
 ### Add Task Page
 
-(Add Screenshot Here)
+<img width="1918" height="858" alt="image" src="https://github.com/user-attachments/assets/f19c805d-8b6d-4bfa-9a90-056f10df62a7" />
+
 
 ---
 
 ### Edit Task Page
 
-(Add Screenshot Here)
+<img width="1918" height="861" alt="image" src="https://github.com/user-attachments/assets/ef7e8960-6888-48e3-8b92-726885e8f017" />
+
 
 ---
 
